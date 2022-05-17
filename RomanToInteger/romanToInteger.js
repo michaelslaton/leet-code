@@ -8,7 +8,7 @@
    const numArr = Array.from(s, (n) => romanNumerals[n]).reverse();
 
    return numArr.reduce((result, num, i) => {
-     i = i - 1;
+     i-=1;
 
      if (numArr[i] > numArr[i + 1] && numArr[i + 1]) {
        return result - num;
