@@ -1,7 +1,3 @@
-/**
- * @param {number} x
- * @return {boolean}
- */
  var isPalindrome = function(x) {
 
   if(Number(Array.from(String(x), Number).reverse().join('')) === x) return true;
