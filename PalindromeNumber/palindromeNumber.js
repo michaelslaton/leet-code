@@ -1,5 +1,3 @@
-const num = 1221;
-
 /**
  * @param {number} x
  * @return {boolean}
@@ -11,4 +9,6 @@ const num = 1221;
   return false;
 };
 
-console.log(isPalindrome(num));
+console.log(isPalindrome(1221)); // True
+console.log(isPalindrome(939)); // True
+console.log(isPalindrome(12345)); // False
