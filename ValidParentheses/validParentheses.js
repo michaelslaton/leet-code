@@ -1,29 +1,19 @@
 var isValid = function (s) {
-  let arr = [];
-  for (const char of s) {
-    if (char === "(" || char === "[" || char === "{") arr.push(char);
+  let result = [];
+  let chars = new Map([['(',')'],['[',']'],['{','}']]);
 
-    if (char === ")" && arr[arr.length - 1] === "(") {
-      arr.pop();
-    } else if (char === ")" && arr[arr.length - 1] !== "(") {
-      return false;
-    };
+  for(let i=0;i<s.length;i++){
 
-    if (char === "]" && arr[arr.length - 1] === "[") {
-      arr.pop();
-    } else if (char === "]" && arr[arr.length - 1] !== "[") {
-      return false;
-    };
+    if(chars.has(s[i])){
+      result.push(chars.get(s[i]));
 
-    if (char === "}" && arr[arr.length - 1] === "{") {
-      arr.pop();
-    } else if (char === "}" && arr[arr.length - 1] !== "{") {
+    } else if (s[i] !== result.pop()) {
       return false;
-    };
-    
+      
+    }
   }
 
-  if (arr.length === 0){ return true} else { return false };
+  return result.length === 0;
 };
 
 console.log(isValid("()")); // true
@@ -31,4 +21,3 @@ console.log(isValid("()[]{}")); // true
 console.log(isValid("(]")); // false
 console.log(isValid("(")); // false
 console.log(isValid("((")); // false
-
