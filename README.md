@@ -1,2 +1,2 @@
 # leet-code
-A simple repository of my leetcode solutions.
+A repository of my leetcode solutions.
