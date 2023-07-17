@@ -13,7 +13,10 @@ function fizzBuzz (n) {
       else results.push(i.toString())
     }
 
-    return console.log(results);
+    return results;
 };
 
-fizzBuzz(3)
+
+console.log(fizzBuzz(3)); // ['1','2','Fizz']
+console.log(fizzBuzz(5)); // ['1','2','Fizz','4','Buzz']
+console.log(fizzBuzz(15)); // ['1','2','Fizz','4','Buzz','Fizz','7','8','Fizz','Buzz','11','Fizz','13','14','FizzBuzz']
