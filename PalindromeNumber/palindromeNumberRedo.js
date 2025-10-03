@@ -1,7 +1,7 @@
 const isPalindrome = (x) => {
     if (x < 0) return false;
     const reversedInput = Number(x.toString().split('').reverse().join(''));
-    if (reversedInput === x)  return true;
+    if (reversedInput === x) return true;
     return false;
 };
 
