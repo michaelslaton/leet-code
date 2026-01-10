@@ -1,6 +1,10 @@
 var isValid = function (s) {
   let result = [];
-  let chars = new Map([['(',')'],['[',']'],['{','}']]);
+  let chars = new Map([
+    ['(',')'],
+    ['[',']'],
+    ['{','}']
+  ]);
 
   for(let i=0;i<s.length;i++){
     if(chars.has(s[i])) result.push(chars.get(s[i]));
@@ -14,3 +18,4 @@ console.log(isValid("()[]{}")); // true
 console.log(isValid("(]")); // false
 console.log(isValid("(")); // false
 console.log(isValid("((")); // false
+console.log(isValid("]()")); // false
